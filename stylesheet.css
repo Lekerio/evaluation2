@@ -1,10 +1,70 @@
 @font-face {
-    font-family: Lato;
-    src: url(./assets/Lato-Regular.ttf);
+  font-family: Lato;
+  src: url(./assets/Lato-Regular.ttf);
 }
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Lato, sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Lato, sans-serif;
+  background-color: lightgray;
+  height:100%;
+}
+
+header {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+header button:hover {
+  color: red;
+  font-size: 2.3rem;
+  letter-spacing: -4px;
+  transition: 500ms;
+}
+
+main {
+    display:flex;
+    justify-content:space-around;
+    padding-top:5rem;
+}
+
+#player1, #player2 {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#totalScorePlayer1, #totalScorePlayer2 {
+    font-size:100px;
+    color:rgb(24, 190, 149);
+}
+
+#currentBoxPlayer1, #currentBoxPlayer2 {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding:0px 40px 0px 40px;
+    border:1px solid rgb(24, 190, 149);
+    margin-top:5rem;
+}
+
+#diceZone button {
+    
+    border:none;
+    background:none;
+    cursor:pointer;
 }
