@@ -3,14 +3,25 @@ let totalScorePlayer2 = document.getElementById("totalScorePlayer2");
 let currentScorePlayer1 = document.getElementById("currentScorePlayer1");
 let currentScorePlayer2 = document.getElementById("currentScorePlayer2");
 let rollButton = document.getElementById("rollButton");
-let holdButon = document.getElementById("holdButton");
+let holdButton = document.getElementById("holdButton");
 let diceImage = document.getElementById("diceImage");
+let player1 = document.getElementById("player1");
+let player2 = document.getElementById("player2");
 
-function randomDice() {
-let randomNum = Math.floor(Math.random() * 6 +1);
-console.log("The number is : "+ randomNum);
-diceImage.setAttribute("src", `./assets/img/de${randomNum}.png`);
-
+function randomDiceNumber() {
+  let randomNum = Math.floor(Math.random() * 6 + 1);
 }
 
-rollButton.addEventListener("click", randomDice)
+function changeColorPlayer() {
+  if (player1.classList.contains("activePlayer")) {
+    player1.classList.toggle("activePlayer");
+    player2.classList.toggle("activePlayer");
+  }
+  else if (player2.classList.contains("activePlayer")) {
+    player2.classList.toggle("activePlayer");
+    player1.classList.toggle("activePlayer");
+  }
+}
+
+
+holdButton.addEventListener("click", changeColorPlayer)
