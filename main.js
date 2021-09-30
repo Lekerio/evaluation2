@@ -17,7 +17,7 @@ let newGameButton = document
   });
 let textMessage = document.getElementById("textMessage");
 
-let goal = 1;
+let goal = 100;
 let lose = 1;
 function win() {
   if (totalScore1 >= goal) {
@@ -30,7 +30,7 @@ function win() {
   else if (totalScore2 >= goal) {
     textMessage.textContent = "Player 2 is the winner ! New game ?"
     textMessage.style.animation = "winAnim 1s ease-in 0s infinite reverse forwards";
-    
+
     rollButton.removeEventListener("click", rollDice);
     holdButton.removeEventListener("click", holding);
   }
