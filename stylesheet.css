@@ -203,7 +203,7 @@ animation:activeButton 1s ease 0s 1 forwards;
     color:aqua;
   }
   50% {
-    transform:rotate(90)
+    transform:rotate(90);
     transform:translateX(10)
   }
 }
