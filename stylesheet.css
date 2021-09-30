@@ -6,10 +6,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: Lato, sans-serif;
   background-color: lightgray;
-  height:100%;
 }
 
 header {
@@ -146,5 +144,66 @@ transition:200ms;
 
   75% {
     transform: translateX(-6px) rotate(1.2deg);
+  }
+}
+@media screen and (max-device-width: 900px) { 
+
+main {
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding-top:30px;
+  gap:3rem;
+}
+#player1, #player2 {
+    width:80%;
+    height:200px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align:center;
+}
+#diceImage {
+  width: 75px !important;
+  height: 75px !important;
+}
+#currentBoxPlayer1, #currentBoxPlayer2 {
+    margin:0;
+    padding:0;
+  }
+#diceZone button {
+  font-size:15px;
+}
+#diceZone button:hover {
+font-size:1rem;
+font-weight:600;
+transition:200ms;
+}
+#diceZone button:active {
+animation:activeButton 1s ease 0s 1 forwards;
+}
+  header {
+    padding-bottom:0;
+  }
+  #diceZone{
+    gap:0;
+    flex-direction:row;
+  }
+  #textBox {
+  padding:0;
+  padding-top:20px;
+  margin:0;
+}
+}
+
+@keyframes activeButton {
+  0%,100% {
+    transform: translateX(0);
+    transform:rotate(0);
+    color:aqua;
+  }
+  50% {
+    transform:rotate(90)
+    transform:translateX(10)
   }
 }
