@@ -147,7 +147,7 @@ transition:200ms;
     transform: translateX(-6px) rotate(1.2deg);
   }
 }
-@media screen and (max-device-width: 900px) { 
+@media screen and (max-width: 900px) { 
 
 main {
   flex-direction:column;
